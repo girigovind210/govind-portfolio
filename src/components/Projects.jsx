@@ -49,14 +49,16 @@ function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-slate-900 rounded-3xl overflow-hidden border border-slate-700 hover:border-cyan-400 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
+              className="group bg-slate-900 rounded-3xl overflow-hidden border border-slate-700 hover:border-cyan-400 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
             >
               {/* Project Image */}
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-60 object-cover"
-              />
+              <div className="overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
 
               <div className="p-7">
 
@@ -73,7 +75,7 @@ function Projects() {
                   {project.tech.map((item, i) => (
                     <span
                       key={i}
-                      className="bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 px-3 py-1 rounded-full text-sm"
+                      className="bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 px-3 py-1 rounded-full text-sm hover:bg-cyan-500 hover:text-white transition"
                     >
                       {item}
                     </span>
@@ -87,7 +89,7 @@ function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-2 bg-white text-black px-5 py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
+                    className="flex items-center gap-2 bg-white text-black px-5 py-3 rounded-xl font-semibold hover:bg-gray-200 hover:scale-105 transition"
                   >
                     <FaGithub />
                     GitHub
@@ -98,7 +100,7 @@ function Projects() {
                       href={project.live}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-2 bg-cyan-500 px-5 py-3 rounded-xl font-semibold hover:bg-cyan-600 transition"
+                      className="flex items-center gap-2 bg-cyan-500 px-5 py-3 rounded-xl font-semibold hover:bg-cyan-600 hover:scale-105 transition"
                     >
                       <FaExternalLinkAlt />
                       Live Demo
