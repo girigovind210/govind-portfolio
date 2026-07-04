@@ -18,14 +18,14 @@ const projects = [
     live: "https://industrial-asset-brain-31510399175.asia-southeast1.run.app/",
   },
   {
-    title: "MedConnect",
-    image: "/projects/medconnect.png",
-    description:
-      "Healthcare platform with authentication, patient dashboard, doctor dashboard, and appointment management.",
-    tech: ["React", "Node.js", "Express.js", "MongoDB"],
-    github: "https://github.com/girigovind210/frontend-medconnectG",
-    live: "#",
-  },
+  title: "MedConnect",
+  image: "/projects/medconnect.png",
+  description:
+    "Healthcare platform with authentication, patient dashboard, doctor dashboard, and appointment management.",
+  tech: ["React", "Node.js", "Express.js", "MongoDB"],
+  github: "https://github.com/girigovind210/frontend-medconnectG",
+  live: "https://frontend-medconnectg-1.onrender.com/#/",
+},
 ];
 
 function Projects() {
